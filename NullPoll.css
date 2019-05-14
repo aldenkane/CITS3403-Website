@@ -1,0 +1,81 @@
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Helvetica';
+}
+
+body{
+  background-image: url("images/background_07.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+html{
+  font-size: 100%;
+}
+
+#nullNav {
+  background-color: rgba(131, 135, 65, 0.97);
+  font-family: 'Helvetica';
+}
+
+#nullNav .navbar-nav .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+#nullNav .navbar-nav .nav-item.active .nav-link {
+  color: #FBEEC1;
+}
+
+#nullNav .navbar-nav .nav-item .nav-link:hover {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+#nullNav .navbar-nav .nav-item.active .nav-link:hover {
+    color: #FBEEC1;
+}
+
+.big-header{
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-family: 'Helvetica';
+  font-weight: 800;
+  color: #FBEEC1;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+.small-header{
+  font-size: 1.4rem;
+  font-family: 'Helvetica';
+  color: #FBEEC1;
+}
+
+.footer{
+  background-color: rgba(131, 135, 65, 0.97);
+  font-family: 'Helvetica';
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.login-text{
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.top-bar{
+  margin-top: .5rem;
+}
+
+.content-background{
+  background-color: rgba(255,255,255,0.85);
+}
+
+.content-text{
+  color: rgb(0,0,0);
+}
+
+.content-section{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
