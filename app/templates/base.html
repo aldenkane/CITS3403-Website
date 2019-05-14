@@ -15,10 +15,12 @@
   <meta name="description" content="CITS3403 Unit Project: What Car Would You Cross the Nullarbor In?">
 
   <!--Link to Bootstrap-->
-  <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.min.css">
+  <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
+  <script src="static/bootstrap/js/bootstrap.min.js"></script>
 
   <!--Link to Custom CSS-->
-  <link rel="stylesheet" type="text/css" media="screen" href="NullPoll.css">
+  <link href="static/nullPoll.css" rel="stylesheet" type="text/css" media="screen">
+  <!--<link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='nullPoll.css')}}"> -->
 
   <!--Link to Custom Fonts-->
   <link rel="stylesheet" type="text/css" href="">
@@ -35,7 +37,7 @@
         <h3 class = "small-header text-left">You want to drive across the</h3>
         <h1 class = "big-header text-center">Nullarbor?</h1> </div>
       <div class="col-sm-3 text-right">
-        <a class="login-text" href="login.html">Login</a>
+        <a class="login-text" href="/login">Login</a>
         <br>
         <a class="login-text" href="register.html">Register</a>
       </div>
@@ -59,18 +61,8 @@
     </div>
   </nav>
 
-  <!--Content Section for Each Page-->
-  <div class="container">
-    <div class="content-section">
-      <div class="row">
-        <div class="col-md-10 mx-auto">
-          <div class="content-background rounded p-5">
-            <p class="content-text"> Some Content lorem ipsum Some Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsumSome Content lorem ipsum</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% block content %}
+  {% endblock %}
 
   <!--Footer-->
   <footer class="footer text-center py-5">

@@ -1,65 +1,6 @@
-<!DOCTYPE html>
-<html lang ="en">
+{% extends "base.html" %}
 
-<head>
-  {% if title %}
-  <title> {{title}} - Delany Bolton + Alden Kane - CITS3403 Unit Project </title>
-  {% else %}
-  <title> Delany Bolton + Alden Kane - CITS3403 Unit Project </title>
-  {% endif %}
-  
-  <!--Website Metadata-->
-  <meta charset = "utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <meta name="author" content="Delany Bolton and Alden Kane">
-  <meta name="description" content="CITS3403 Unit Project: What Car Would You Cross the Nullarbor In?">
-
-  <!--Link to Bootstrap-->
-  <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.min.css">
-
-  <!--Link to Custom CSS-->
-  <link rel="stylesheet" type="text/css" media="screen" href="NullPoll.css">
-
-  <!--Link to Custom Fonts-->
-  <link rel="stylesheet" type="text/css" href="">
-
-</head>
-
-<body onload="clock()">
-
-  <!--Top Container for Header and Login-->
-  <div class = "container top-bar">
-    <div class = "row">
-      <div class="col-sm-3"> </div>
-      <div class="col-sm-6">
-        <!--Header-->
-        <h3 class = "small-header text-left">You want to drive across the</h3>
-        <h1 class = "big-header text-center">Nullarbor?</h1> </div>
-      <div class="col-sm-3 text-right">
-        <a class="login-text" href="login.html">Login</a>
-        <br>
-        <a class="login-text" href="register.html">Register</a>
-      </div>
-    </div>
-  </div>
-
-  <!--Navbar-->
-  <nav class = "navbar-expand-lg py-md-4" id="nullNav">
-    <div class="collapse navbar-collapse" id="navbarFunction">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item px-md-4 active">
-          <a class="nav-link text-uppercase" href="home.html"> Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item px-md-4">
-          <a class="nav-link text-uppercase" href="vote.html">Vote</a>
-        </li>
-        <li class="nav-item px-md-4">
-          <a class="nav-link text-uppercase" href="results.html">Results</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
+{% block content %}
   <!--Content Section for Each Page-->
   <div class="container">
     <div class="content-section">
@@ -72,43 +13,4 @@
       </div>
     </div>
   </div>
-
-  <!--Footer-->
-  <footer class="footer text-center py-5">
-    <div class="container">
-      <p class="m-0 small"> Delany Bolton's + Alden Kane's CITS3403: Agile Web Development Unit Project </p>
-      <p class="m-0 small"> Page Updated On: Mon May 21 2019 </p>
-      <p class="m-0 small"> Today's Date: <span id="date"> </span> </p>
-      <p class="m-0 small"> Current Time: <span id="time"> </span> </p>
-    </div>
-  </footer>
-
-  <!--Scripts for Bootstrap-->
-  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!--Scripts for Date-->
-  <script>
-    var date = new Date();
-    document.getElementById("date").innerHTML = date.toDateString();
-  </script>
-
-  <!--Script for Dynamic Time-->
-  <script>
-    function clock(){
-      var curDate = new Date();
-      var h = curDate.getHours();
-      var m = curDate.getMinutes();
-      var s = curDate.getSeconds();
-      m = tCount(m);
-      s = tCount(s);
-      document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
-      var t = setTimeout(clock, 500);
-    }
-    //Function to pad numbers with less than 10 with a 0
-    function tCount(i){
-      if(i<10) {i = "0" + i};
-      return i;
-    }
-  </script>
-
-</body>
+{% endblock %}
