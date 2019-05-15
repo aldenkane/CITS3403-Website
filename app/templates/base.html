@@ -37,29 +37,31 @@
         <h3 class = "small-header text-left">You want to drive across the</h3>
         <h1 class = "big-header text-center">Nullarbor?</h1> </div>
       <div class="col-sm-3 text-right">
-        <a class="login-text" href="/login">Login</a>
+        <a class="login-text" href="{{ url_for('login') }}">Login</a>
         <br>
-        <a class="login-text" href="register.html">Register</a>
+        <a class="login-text" href="">Register</a>
       </div>
     </div>
   </div>
 
   <!--Navbar-->
-  <nav class = "navbar-expand-lg py-md-4" id="nullNav">
+  <nav class = "navbar-expand-sm py-sm-4" id="nullNav">
     <div class="collapse navbar-collapse" id="navbarFunction">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item px-md-4 active">
-          <a class="nav-link text-uppercase" href="home.html"> Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item px-sm-4 active">
+          <a class="nav-link text-uppercase" href="{{ url_for('index') }}"> Home <span class="sr-only">(current)</span></a> <!--REMEMBER: Need to edit this depending on what page-->
         </li>
-        <li class="nav-item px-md-4">
-          <a class="nav-link text-uppercase" href="vote.html">Vote</a>
+        <li class="nav-item px-sm-4">
+          <a class="nav-link text-uppercase" href="{{ url_for('vote') }}">Vote</a>
         </li>
-        <li class="nav-item px-md-4">
-          <a class="nav-link text-uppercase" href="results.html">Results</a>
+        <li class="nav-item px-sm-4">
+          <a class="nav-link text-uppercase" href="{{ url_for('results') }}">Results</a>
         </li>
       </ul>
     </div>
   </nav>
+
+  <!--Flashed messages would go here, but they don't-->
 
   {% block content %}
   {% endblock %}
@@ -73,9 +75,6 @@
       <p class="m-0 small"> Current Time: <span id="time"> </span> </p>
     </div>
   </footer>
-
-  <!--Scripts for Bootstrap-->
-  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!--Scripts for Date-->
   <script>
