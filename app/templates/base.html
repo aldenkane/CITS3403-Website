@@ -48,13 +48,13 @@
   <nav class = "navbar-expand-sm py-sm-4" id="nullNav">
     <div class="collapse navbar-collapse" id="navbarFunction">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item px-sm-4 active">
+        <li class="nav-item px-sm-4 {% if request.path == "/index" %} active {% elif request.path == "" %} active {% endif %}">
           <a class="nav-link text-uppercase" href="{{ url_for('index') }}"> Home <span class="sr-only">(current)</span></a> <!--REMEMBER: Need to edit this depending on what page-->
         </li>
-        <li class="nav-item px-sm-4">
+        <li class="nav-item px-sm-4 {% if request.path == "/vote" %} active {% endif %}">
           <a class="nav-link text-uppercase" href="{{ url_for('vote') }}">Vote</a>
         </li>
-        <li class="nav-item px-sm-4">
+        <li class="nav-item px-sm-4 {% if request.path == "/results" %} active {% endif %}">
           <a class="nav-link text-uppercase" href="{{ url_for('results') }}">Results</a>
         </li>
       </ul>
