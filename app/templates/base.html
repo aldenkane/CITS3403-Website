@@ -23,7 +23,13 @@
   <!--<link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='nullPoll.css')}}"> -->
 
   <!--Link to Custom Fonts-->
-  <link rel="stylesheet" type="text/css" href="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka+the+Great">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Inline">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Skranji">
+
 </head>
 
 <body onload="clock()">
@@ -34,7 +40,7 @@
       <div class="col-sm-3"> </div>
       <div class="col-sm-6">
         <!--Header-->
-        <h3 class = "small-header text-left">You want to drive across the</h3>
+        <h3 class = "small-header text-left">You want to drive across the...</h3>
         <h1 class = "big-header text-center">Nullarbor?</h1> </div>
       <div class="col-sm-3 text-right">
         {% if current_user.is_anonymous %}
@@ -81,6 +87,9 @@
       <p class="m-0 small"> Current Time: <span id="time"> </span> </p>
     </div>
   </footer>
+
+  <!--Bootstrap Scripts-->
+  <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!--Scripts for Date-->
   <script>

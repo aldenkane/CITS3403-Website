@@ -1,3 +1,6 @@
+html{
+  font-size: 100%;
+}
 
 h1, h2, h3, h4, h5, h6{
   font-family: 'Helvetica';
@@ -10,13 +13,10 @@ body{
   background-size: cover;
 }
 
-html{
-  font-size: 100%;
-}
-
 #nullNav {
   background-color: rgba(131, 135, 65, 0.97);
   font-family: 'Helvetica';
+  margin-bottom: 2rem;
 }
 
 #nullNav .navbar-nav .nav-item .nav-link {
@@ -37,25 +37,25 @@ html{
 }
 
 .big-header{
-  font-size: 2.2rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
-  font-family: 'Helvetica';
-  font-weight: 800;
+  font-family: 'Bungee Inline';
   color: #FBEEC1;
   margin-top: 0rem;
   margin-bottom: 1rem;
 }
 
 .small-header{
-  font-size: 1.4rem;
-  font-family: 'Helvetica';
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: 'Bungee Inline';
   color: #FBEEC1;
 }
 
 .footer{
   background-color: rgba(131, 135, 65, 0.97);
   font-family: 'Helvetica';
-  font-weight: 600;
+  font-weight: 700;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -73,29 +73,34 @@ html{
 
 .content-text{
   color: rgb(0,0,0);
+  font-size: 0.8rem;
+}
+
+.content-heading-text{
+  color: rgb(0,0,0);
+  font-size: 2.5rem;
+  font-family: 'Alegreya Sans SC';
+  display: block;
+}
+
+.small-content-heading-text{
+  color: rgb(0,0,0);
+  font-size: 0.8rem;
+  font-family: 'Alegreya Sans SC';
+  font-weight: 700;
+  display: block;
+  text-transform: uppercase;
 }
 
 .content-section{
-  margin-top: -5rem;
-  margin-bottom: 5rem;
-  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
+.word-section{
+  margin-top: -4rem;
+}
 
 .top-image{
-  position: relative;
-  z-index: 0;
+  margin: 0;
 }
-
-
-.top-body {
-  position: relative;
-}
-
-/*
-.top-section{
-  margin-top: -5rem;
-  position: relative;
-  z-index: 1;
-}
-*/
