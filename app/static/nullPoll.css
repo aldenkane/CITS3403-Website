@@ -76,6 +76,26 @@ html{
 }
 
 .content-section{
-  margin-top: 5rem;
+  margin-top: -5rem;
   margin-bottom: 5rem;
+  position: relative;
 }
+
+
+.top-image{
+  position: relative;
+  z-index: 0;
+}
+
+
+.top-body {
+  position: relative;
+}
+
+/*
+.top-section{
+  margin-top: -5rem;
+  position: relative;
+  z-index: 1;
+}
+*/
