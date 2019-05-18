@@ -37,9 +37,15 @@
         <h3 class = "small-header text-left">You want to drive across the</h3>
         <h1 class = "big-header text-center">Nullarbor?</h1> </div>
       <div class="col-sm-3 text-right">
+        {% if current_user.is_anonymous %}
         <a class="login-text" href="{{ url_for('login') }}">Login</a>
         <br>
-        <a class="login-text" href="">Register</a>
+        <a class="login-text" href="{{ url_for('register')}}">Register</a>
+        {% else %}
+        <a class="login-text" href=""> Hi, {{current_user.username}}</a>
+        <br>
+        <a class="login-text" href="{{ url_for('logout') }}">Logout</a>
+        {% endif %}
       </div>
     </div>
   </div>
