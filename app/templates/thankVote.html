@@ -2,24 +2,18 @@
 {% block content %}
   <!--Content Section for Each Page-->
     <div class="container content-section">
-        <img class="top-image img-fluid rounded" src="static/images/topresults2.jpg" alt="">
+        <img class="top-image img-fluid rounded" src="static/images/topvote8.jpg" alt="">
         <div class="word-section">
           <div class="row">
             <div class="col-md-10 mx-auto">
               <div class="content-background rounded p-5">
                 <h2>
-                  <span class="small-content-heading-text"> Here's what the people said for...</span>
-                  <span class="content-heading-text">{{ data.question }}</span>
+                  <span class="small-content-heading-text"> Your response has been record...</span>
+                  <span class="content-heading-text">Thank You</span>
                 </h2>
-                <ul class="content-text">
-                {% for e in votes %}
-                  <li>{{ e }}: {{ votes[e] }} Votes</li>
-                {% endfor %}
-                </ul>
                 <p class="m-0 reference-text">Background image via <a href="http://www.peakpx.com">Peakpx</a>
                 <p class="m-0 reference-text">Image via <a href="http://www.pexel.com">Pexel</a></p>
                 <p class="m-0 reference-text">Referencing not required per Peakpx and Pexel terms of service</p>
-              </div>
               </div>
             </div>
           </div>

@@ -19,13 +19,8 @@ dateFile = 'data.txt'
 from app import routes, models
 from app.models import User, Topics, Polls, Options
 
-# admin = Admin(app, name='Dashboard')
-# admin.add_view(ModelView(User, db.session))
-# admin.add_view(ModelView(Topics, db.session))
-# admin.add_view(ModelView(Polls, db.session))
-# admin.add_view(ModelView(Options, db.session))
 
-#This has to do with admin authentication
+#Administrator Authentications
 admin = Admin(app, name='Dashboard', index_view=AdminView(User, db.session, url='/admin', endpoint='admin'))
 admin.add_view(AdminView(Topics, db.session))
 admin.add_view(AdminView(Polls, db.session))

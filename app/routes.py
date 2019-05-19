@@ -11,25 +11,24 @@ from werkzeug.urls import url_parse
 def index():
     return render_template('index.html', title='Home')
 
-
 @app.route('/vote')
 @login_required
 def vote():
-    poll_data = {'question':'Which car would you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
+    poll_data = {'question':'Which car do you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
     return render_template('vote.html', title='Vote', data=poll_data)
 
 @app.route('/poll')
 def poll():
-    poll_data = {'question':'Which car would you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
+    poll_data = {'question':'Which car do you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
     vote = request.args.get('field')
     out = open('data.txt', 'a')
     out.write( vote + '\n' )
     out.close()
-    return render_template('index.html', data=poll_data)
+    return render_template('thankVote.html', data=poll_data)
 
 @app.route('/results')
 def results():
-    poll_data = {'question':'Which car would you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
+    poll_data = {'question':'Which car do you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
     votes = {}
     for f in poll_data['fields']:
         votes[f] = 0
