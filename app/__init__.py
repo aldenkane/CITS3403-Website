@@ -14,6 +14,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
+dateFile = 'data.txt'
 
 from app import routes, models
 from app.models import User, Topics, Polls, Options

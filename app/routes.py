@@ -18,17 +18,27 @@ def vote():
     poll_data = {'question':'Which car would you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
     return render_template('vote.html', title='Vote', data=poll_data)
 
-# @app.route('/poll')
-# def poll():
-#     vote = request.args.get('field')
-#     out = open(filename, 'a')
-#     out.write( vote + '\n' )
-#     out.close()
-#     return vote
+@app.route('/poll')
+def poll():
+    poll_data = {'question':'Which car would you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
+    vote = request.args.get('field')
+    out = open('data.txt', 'a')
+    out.write( vote + '\n' )
+    out.close()
+    return render_template('index.html', data=poll_data)
 
 @app.route('/results')
 def results():
-    return render_template('results.html', title='Results')
+    poll_data = {'question':'Which car would you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
+    votes = {}
+    for f in poll_data['fields']:
+        votes[f] = 0
+
+    f  = open('data.txt', 'r')
+    for line in f:
+        vote = line.rstrip("\n")
+        votes[vote] += 1
+    return render_template('results.html', data=poll_data, votes=votes)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

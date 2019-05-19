@@ -1,1 +1,22 @@
 {% extends "base.html" %}
+{% block content %}
+  <!--Content Section for Each Page-->
+    <div class="container content-section">
+        <img class="top-image img-fluid rounded" src="static/images/road2.jpg" alt="">
+        <div class="word-section">
+          <div class="row">
+            <div class="col-md-10 mx-auto">
+              <div class="content-background rounded p-5">
+                <h1>Results</h1>
+                {{ data.question }}
+                <ul>
+                {% for e in votes %}
+                  <li>{{ e }} {{ votes[e] }}</li>
+                {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
