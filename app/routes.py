@@ -15,7 +15,16 @@ def index():
 @app.route('/vote')
 @login_required
 def vote():
-    return render_template('vote.html', title='Vote')
+    poll_data = {'question':'Which car would you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
+    return render_template('vote.html', title='Vote', data=poll_data)
+
+# @app.route('/poll')
+# def poll():
+#     vote = request.args.get('field')
+#     out = open(filename, 'a')
+#     out.write( vote + '\n' )
+#     out.close()
+#     return vote
 
 @app.route('/results')
 def results():

@@ -92,13 +92,19 @@ body{
   text-transform: uppercase;
 }
 
+.form-text{
+  color: rgb(0,0,0);
+  font-size: 0.8rem;
+  font-family: 'Helvetica';
+}
+
 .content-section{
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
 .word-section{
-  margin-top: -4rem;
+  margin-top: -5rem;
 }
 
 .top-image{
