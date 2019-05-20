@@ -2,7 +2,7 @@ from flask_admin.contrib.sqla import ModelView
 from flask_login import current_user
 from flask import session, redirect, url_for, request
 
-
+#Daniel Osaetin's "Flask by Example, Parts 1-7" Followed to create AdminView
 class AdminView(ModelView):
 
     def __init__(self, *args, **kwargs):

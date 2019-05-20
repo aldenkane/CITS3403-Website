@@ -2,13 +2,14 @@
 <html lang ="en">
 
 <head>
+  <!--Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8" - Followed for structure of if/else/endif statement here-->
   {% if title %}
   <title> {{title}} - Delany Bolton + Alden Kane - CITS3403 Unit Project </title>
   {% else %}
   <title> Delany Bolton + Alden Kane - CITS3403 Unit Project </title>
   {% endif %}
 
-  <!--Website Metadata-->
+  <!--Website Metadata for SEO and Browser Rendering-->
   <meta charset = "utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta name="author" content="Delany Bolton and Alden Kane">
@@ -43,10 +44,13 @@
         <h3 class = "small-header text-left">So you want to drive across the...</h3>
         <h1 class = "big-header text-center">Nullarbor?</h1> </div>
       <div class="col-sm-3 text-right">
+        <!--Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8" - Followed for if/else/endif statement here-->
+        <!--Diplay for anonymous user-->
         {% if current_user.is_anonymous %}
         <a class="login-text" href="{{ url_for('login') }}">Login</a>
         <br>
         <a class="login-text" href="{{ url_for('register')}}">Register</a>
+        <!--Diplay for logged in user-->
         {% else %}
         <a class="login-text" href=""> Hi, {{current_user.username}}</a>
         <br>
@@ -56,25 +60,24 @@
     </div>
   </div>
 
-  <!--Navbar-->
+  <!--Navbar with functionality to highlight current page-->
   <nav class = "navbar-expand-sm py-sm-4" id="nullNav">
     <div class="collapse navbar-collapse" id="navbarFunction">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item px-sm-4 {% if request.path == "/index" %} active {% elif request.path == "" %} active {% endif %}">
-          <a class="nav-link text-uppercase" href="{{ url_for('index') }}"> Home <span class="sr-only">(current)</span></a> <!--REMEMBER: Need to edit this depending on what page-->
+        <li class="nav-item px-sm-4 {% if request.path == "/index" %} active {% elif request.path == "" %} active {% endif %}"> <!--Text highlighting feature through active tag based off of what page is currently clicked-->
+          <a class="nav-link text-uppercase" href="{{ url_for('index') }}"> Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item px-sm-4 {% if request.path == "/vote" %} active {% endif %}">
+        <li class="nav-item px-sm-4 {% if request.path == "/vote" %} active {% endif %}"> <!--Text highlighting feature through active tag based off of what page is currently clicked-->
           <a class="nav-link text-uppercase" href="{{ url_for('vote') }}">Vote</a>
         </li>
-        <li class="nav-item px-sm-4 {% if request.path == "/results" %} active {% endif %}">
+        <li class="nav-item px-sm-4 {% if request.path == "/results" %} active {% endif %}"> <!--Text highlighting feature through active tag based off of what page is currently clicked-->
           <a class="nav-link text-uppercase" href="{{ url_for('results') }}">Results</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <!--Flashed messages would go here, but they don't-->
-
+  <!--Block content for all other html templates to build off of-->
   {% block content %}
   {% endblock %}
 
@@ -82,22 +85,22 @@
   <footer class="footer text-center py-5">
     <div class="container">
       <p class="m-0 small"> Delany Bolton's + Alden Kane's CITS3403: Agile Web Development Unit Project </p>
-      <p class="m-0 small"> Page Updated On: Mon May 21 2019 </p>
-      <p class="m-0 small"> Today's Date: <span id="date"> </span> </p>
-      <p class="m-0 small"> Current Time: <span id="time"> </span> </p>
+      <p class="m-0 small"> Page Updated On: Mon May 20 2019 </p>
+      <p class="m-0 small"> Today's Date: <span id="date"> </span> </p> <!--Renders current date using date script-->
+      <p class="m-0 small"> Current Time: <span id="time"> </span> </p> <!--Moving clock using clock function-->
     </div>
   </footer>
 
   <!--Bootstrap Scripts-->
   <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!--Scripts for Date-->
+  <!--Scripts for Date is rendered in footer. Script is written in JS-->
   <script>
     var date = new Date();
     document.getElementById("date").innerHTML = date.toDateString();
   </script>
 
-  <!--Script for Dynamic Time-->
+  <!--Script for Dynamic Time. Rendered in footer. Uses JS-->
   <script>
     function clock(){
       var curDate = new Date();

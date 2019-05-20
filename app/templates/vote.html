@@ -2,7 +2,7 @@
 {% block content %}
   <!--Content Section for Each Page-->
     <div class="container content-section">
-        <img class="top-image img-fluid rounded" src="static/images/topvote8.jpg" alt="">
+        <img class="top-image img-fluid rounded" src="static/images/topvote8.jpg" alt=""> <!--Top image link-->
         <div class="word-section">
           <div class="row">
             <div class="col-md-10 mx-auto">
@@ -11,6 +11,7 @@
                   <span class="small-content-heading-text"> So tell us...</span>
                   <span class="content-heading-text">{{ data.question }}</span>
                 </h2>
+                  <!--Gabor Szabo's "A polling station using Flask" - Followed for creation of for loop to render options and link poll to routes.py page using /poll link-->
                   <form class="content-text" action="/poll">
                     {% for e in data.fields %}
                        <input type="radio" name="field" value="{{ e }}"> {{ e }}<br>
@@ -19,6 +20,8 @@
                     <input type="submit" value="Vote"/>
                     <br>
                   </form>
+                <br>
+                <!--Image References-->
                 <p class="m-0 reference-text">Background image via <a href="http://www.peakpx.com">Peakpx</a>
                 <p class="m-0 reference-text">Image via <a href="http://www.pexel.com">Pexel</a></p>
                 <p class="m-0 reference-text">Referencing not required per Peakpx and Pexel terms of service</p>

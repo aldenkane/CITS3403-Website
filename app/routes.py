@@ -19,6 +19,7 @@ def vote():
 
 @app.route('/poll')
 def poll():
+    #Gabor Szabo's "A polling station using Flask" Followed to build polling structure and write data to data.txt
     poll_data = {'question':'Which car do you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
     vote = request.args.get('field')
     out = open('data.txt', 'a')
@@ -28,24 +29,26 @@ def poll():
 
 @app.route('/results')
 def results():
+    #Gabor Szabo's "A polling station using Flask" followed to build polling structure and read data from data.txt
     poll_data = {'question':'Which car do you want to drive across the Nullarbor?','fields':['Ford Bronco', 'Jeep Wrangler', 'Subaru Outback', 'Tesla Model S', 'Toyota Land Cruiser']}
     votes = {}
     for f in poll_data['fields']:
-        votes[f] = 0
+        votes[f] = 0 #Initialize all votes to 0
 
-    f  = open('data.txt', 'r')
+    f  = open('data.txt', 'r') #Open desired file
     for line in f:
         vote = line.rstrip("\n")
         votes[vote] += 1
     return render_template('results.html', data=poll_data, votes=votes)
 
+#Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8" followed to create login form
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('index'))
+        return redirect(url_for('index')) #Redirect if user already logged in
     form = LoginForm()
     if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
+        user = User.query.filter_by(username=form.username.data).first() #Validation of code
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
             return redirect(url_for('login'))
@@ -56,6 +59,7 @@ def login():
         return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
 
+#Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8" followed to create registration form
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
@@ -73,4 +77,4 @@ def register():
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('index')) #User logs out and is returned to home page

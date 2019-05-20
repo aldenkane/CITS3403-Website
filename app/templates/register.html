@@ -6,34 +6,35 @@
         <div class="col-md-10 mx-auto">
           <div class="content-background rounded p-5">
             <h2 class="content-heading-text">Register</h2>
+            <!--Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8" - Followed to create register form here-->
             <form action="" method="post">
                 {{ form.hidden_tag() }}
                 <p class="form-text">
                     {{ form.username.label }}<br>
                     {{ form.username(size=32) }}<br>
                     {% for error in form.username.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
+                    <span style="color: red;">[{{ error }}]</span> <!--Display error message for username-->
                     {% endfor %}
                 </p>
                 <p class="form-text">
                     {{ form.email.label }}<br>
                     {{ form.email(size=64) }}<br>
                     {% for error in form.email.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
+                    <span style="color: red;">[{{ error }}]</span> <!--Display error message for email-->
                     {% endfor %}
                 </p>
                 <p class="form-text">
                     {{ form.password.label }}<br>
                     {{ form.password(size=32) }}<br>
                     {% for error in form.password.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
+                    <span style="color: red;">[{{ error }}]</span> <!--Display error message for password-->
                     {% endfor %}
                 </p>
                 <p class="form-text">
                     {{ form.password2.label }}<br>
                     {{ form.password2(size=32) }}<br>
                     {% for error in form.password2.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
+                    <span style="color: red;">[{{ error }}]</span> <!--Display error message for password validation-->
                     {% endfor %}
                 </p>
                 <p class="form-text">{{ form.submit() }}</p>

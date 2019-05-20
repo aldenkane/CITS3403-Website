@@ -1,7 +1,7 @@
-# CITS3403-Website
-Delany Bolton and Alden Kane's website for University of Western Australia's CITS 3403: Agile Web Development. This asks users the question: "Which car do you want to drive across the Nullarbor." The social choice mechanism used for voting is first-past-the-post voting, in which the option with the most votes wins the poll.
+## CITS3403-Website
+Delany Bolton and Alden Kane's website for University of Western Australia's CITS3403: Agile Web Development. This asks users the question: "Which car do you want to drive across the Nullarbor?" The social choice mechanism used for voting is first-past-the-post voting, in which the option with the most votes wins the poll.
 
-# Authors
+## Authors
   * Delany Bolton (22640583)
   * Alden Kane (22640752)
 
@@ -15,7 +15,7 @@ The core flask application for this project is CITS3403-Website.py
 There are three primary views in this application:
   1. Anonymous View: This view allows users to view the homepage and the results of the poll. From this view, users can log in. However, users cannot vote from this view. The voting page is hidden, and users are required to log in before voting.
   2. User View: This view has all of the functionality of the Anonymous View, except users can now vote on polls. They can also log out of their account and return to the Anonymous View from here. A sample account to log into this view is username = "alden" and password = "alden"
-  3. Admin View: This view has all of the functionality of the User View and is only available for the username = "admin." This view can access the administrator workspace, found at localhost:5000/admin. The admin can add and delete users, and access other databases. A sample account to log into this view is username = "Administator" and password = "admin"
+  3. Admin View: This view has all of the functionality of the User View and is only available for the username = "admin." This view can access the administrator workspace, found at localhost:5000/admin. The admin can add and delete users, and access other databases. A sample account to log into this view is username = "admin" and password = "admin"
 
 This application also has the following notable features:
   * An accounts feature, allowing for regular and admin users. This was implemented using Flask.
@@ -25,14 +25,11 @@ This application also has the following notable features:
 
 This application is designed to be sleek, intuitive, and easy to use.
 
-The following resources were used in the development of this project:
-
-
 ## Launching this Application
 
-Python3 and sqlite3 need to be installed
+Python3 and sqlite3 need to be installed.
 
-All needed dependencies are listed below:
+All needed dependencies are listed below and also listed in requirements.txt:
   * alembic==1.0.10
   * Click==7.0
   * Flask==1.0.2
@@ -79,7 +76,7 @@ python -m flask db init
 
 However, this application ships with a test database, app.db. No database needs to be built.
 
-Run the following command, while in your virtual environment:
+To launch the application, run the following command while in your virtual environment:
 
 ```bash
 python -m flask run
@@ -142,12 +139,11 @@ Verify Admin User View:
 
 The following tutorials were integral in learning Flask and building this application. Most modules were from the CITS3403 Laboratory Work. Comments are provided throughout the application indicating that a tutorial was followed to construct functions and features.
 
-  * Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8". Found at: (https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
-  * Daniel Osaetin's (Danidee's) "Flask by Example, Parts 1-7". Found at: (https://danidee10.github.io/2016/11/14/flask-by-example-7.html)
-  * Gabor Szabo's "A polling station using Flask. Found at: (https://code-maven.com/a-polling-station-with-flask)
+  * Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8". Found at: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world. Reference for this in source code is #Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8"
+  * Daniel Osaetin's (Danidee's) "Flask by Example, Parts 1-7". Found at: https://danidee10.github.io/2016/11/14/flask-by-example-7.html. Reference for this in source code is #Daniel Osaetin's "Flask by Example, Parts 1-7"
+  * Gabor Szabo's "A polling station using Flask. Found at: https://code-maven.com/a-polling-station-with-flask. Reference for this in source code is #Gabor Szabo's "A polling station using Flask"
 
-
-## License
+This application also uses Bootstrap and Flask, under MIT Licenses.
 
 ## License
 
