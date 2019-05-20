@@ -1,6 +1,10 @@
 # CITS3403-Website
 Delany Bolton and Alden Kane's website for University of Western Australia's CITS 3403: Agile Web Development. This asks users the question: "Which car do you want to drive across the Nullarbor." The social choice mechanism used for voting is first-past-the-post voting, in which the option with the most votes wins the poll.
 
+# Authors
+  * Delany Bolton (22640583)
+  * Alden Kane (22640752)
+
 
 ## Architecture
 
@@ -24,7 +28,9 @@ This application is designed to be sleek, intuitive, and easy to use.
 The following resources were used in the development of this project:
 
 
-## Launching this application
+## Launching this Application
+
+Python3 and sqlite3 need to be installed
 
 All needed dependencies are listed below:
   * alembic==1.0.10
@@ -63,7 +69,17 @@ virtualenv venv
 venv\Scripts\activate
 ```
 
-Once all of the dependencies are installed, run the following command, while in your virtual environment:
+Once in a virtual environment, install python3 and sqlite3, along with all other dependencies.
+
+If no database is found with the module, build the database using:
+
+```bash
+python -m flask db init
+```
+
+However, this application ships with a test database, app.db. No database needs to be built.
+
+Run the following command, while in your virtual environment:
 
 ```bash
 python -m flask run
@@ -122,5 +138,17 @@ Verify Admin User View:
   6. Attempt to log in to deleted account
   7. User will not log in
 
+## Referencing and Acknowledgements
+
+The following tutorials were integral in learning Flask and building this application. Most modules were from the CITS3403 Laboratory Work. Comments are provided throughout the application indicating that a tutorial was followed to construct functions and features.
+
+  * Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8". Found at: (https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+  * Daniel Osaetin's (Danidee's) "Flask by Example, Parts 1-7". Found at: (https://danidee10.github.io/2016/11/14/flask-by-example-7.html)
+  * Gabor Szabo's "A polling station using Flask. Found at: (https://code-maven.com/a-polling-station-with-flask)
+
+
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
