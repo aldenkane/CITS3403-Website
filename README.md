@@ -5,6 +5,7 @@ Delany Bolton and Alden Kane's website for University of Western Australia's CIT
   * Delany Bolton (22640583)
   * Alden Kane (22640752)
 
+A git log, showing commits from both partners, can be found in LOG.txt. While Alden has more total commits, both partners agree that work was equitably distributed.
 
 ## Architecture
 
@@ -150,7 +151,7 @@ Verify Admin User View:
   6. Attempt to log in to deleted account
   7. User will not log in
 
-## Referencing and Acknowledgements
+## References and Acknowledgements
 
 The following tutorials were integral in learning Flask and building this application. Most modules were from the CITS3403 Laboratory Work. Comments are provided throughout the application indicating that a tutorial was followed to construct functions and features.
 
@@ -158,7 +159,28 @@ The following tutorials were integral in learning Flask and building this applic
   * Daniel Osaetin's (Danidee's) "Flask by Example, Parts 1-7". Found at: https://danidee10.github.io/2016/11/14/flask-by-example-7.html. Reference for this in source code is ```#Daniel Osaetin's "Flask by Example, Parts 1-7"```
   * Gabor Szabo's "A polling station using Flask. Found at: https://code-maven.com/a-polling-station-with-flask. Reference for this in source code is ```#Gabor Szabo's "A polling station using Flask"```
 
-This application also uses Bootstrap and Flask, under MIT Licenses.
+This application uses Bootstrap, under an MIT License.
+
+The following external libraries were used in building this application, under an MIT License:
+  * alembic==1.0.10
+  * Click==7.0
+  * Flask==1.0.2
+  * Flask-Admin==1.5.3
+  * Flask-Login==0.4.1
+  * Flask-Migrate==2.4.0
+  * Flask-SQLAlchemy==2.4.0
+  * Flask-WTF==0.14.2
+  * itsdangerous==1.1.0
+  * Jinja2==2.10.1
+  * Mako==1.0.10
+  * MarkupSafe==1.1.1
+  * python-dateutil==2.8.0
+  * python-dotenv==0.10.2
+  * python-editor==1.0.4
+  * six==1.12.0
+  * SQLAlchemy==1.3.3
+  * Werkzeug==0.15.2
+  * WTForms==2.2.1
 
 ## License
 

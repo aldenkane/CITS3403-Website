@@ -1,0 +1,119 @@
+commit 6873afd73c76a03d9cd1dc883540aafb3a63b4f5
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Mon May 20 14:37:18 2019 +0800
+
+    Added unit tests
+
+commit b2ae3b15eb6f020c3c9fd117f97ade14368bf0b5
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Mon May 20 14:16:17 2019 +0800
+
+    Cosmetic Improvements and Code Cleanup
+
+commit a242081536aa168ad350394f387b9bb0b85f98c8
+Author: aldenkane <akane2@nd.edu>
+Date:   Mon May 20 12:00:41 2019 +0800
+
+    Create LICENSE.md
+
+commit 9bc495cfd5e985b5b8ea7f2c0a6899418537ce5b
+Author: aldenkane <akane2@nd.edu>
+Date:   Mon May 20 12:00:16 2019 +0800
+
+    Delete LICENSE
+
+commit 14203fc247966fdbce947892b141a1a1d0074902
+Author: aldenkane <akane2@nd.edu>
+Date:   Mon May 20 11:59:54 2019 +0800
+
+    Create LICENSE
+
+commit ebd2d99169661dc0d81c56b181b27521125a38da
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Mon May 20 11:49:18 2019 +0800
+
+    Updated README
+
+commit b98ec141202624854d5e7248ce79d8b23b082ef1
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Mon May 20 04:12:33 2019 +0800
+
+    Cosmetic Changes
+
+commit cb0db35be7e2f42d1b2632cb0834b5a505d6a452
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Sun May 19 23:06:10 2019 +0800
+
+    Functional Improvements
+
+commit 85a4cb86bfe85ffdcdcb7f84d47de4a02024a1d1
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Sun May 19 15:33:47 2019 +0800
+
+    Working Poll
+
+commit 186b96f924fe5dc73266075c878aa0cda66ffaf6
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Sun May 19 15:08:01 2019 +0800
+
+    Fixed Database
+
+commit 19829fd5bbc05b4776261f85ad1a30328da2d91e
+Author: Delany <delanybolton1@gmail.com>
+Date:   Sun May 19 02:42:14 2019 -0400
+
+    Admin with start of polling
+
+commit 5c825bbdfe1b32f6ac3da4531ab3f5ad9a549ac6
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Sat May 18 22:08:57 2019 +0800
+
+    Cosmetic Improvements
+
+commit 7b672aeed8efaae745a0f063e252c43364966857
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Sat May 18 20:08:08 2019 +0800
+
+    Databases Set Up for Polling
+
+commit 830d9b53563fa5ae35eeeefd34de99a1709e6230
+Author: Delany <delanybolton1@gmail.com>
+Date:   Sat May 18 01:28:39 2019 -0400
+
+    Login and Register Functional w/ Database
+
+commit 3723fb9bc73db03f00e03a54b57242cdf011267e
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Fri May 17 20:55:45 2019 +0800
+
+    Database Configured
+
+commit 73781948287b18e4aadacc3f062895d6aa3da37d
+Author: Delany <delanybolton1@gmail.com>
+Date:   Tue May 14 23:45:25 2019 -0400
+
+    Pages Linked Together with Modified Routes
+
+commit b489da7e0fbbe437d6c0d0d6ddf7b5a9820ee498
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Wed May 15 00:39:10 2019 +0800
+
+    Beginning of Login Form
+
+commit 12ede26e33b659ba2ebc8152aa0cf5b37b71a96a
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Tue May 14 21:11:47 2019 +0800
+
+    Initial Flask Integration
+
+commit 7f426fde0f9a035a190cff00340878db9d0005ba
+Author: Alden Kane <aldenkane1@Aldens-MacBook-Pro-2.local>
+Date:   Fri May 10 12:09:57 2019 +0800
+
+    Initial Commit
+
+commit f26a10e044d266fe123f1115980d419ff14419b3
+Author: aldenkane <akane2@nd.edu>
+Date:   Fri May 10 11:52:10 2019 +0800
+
+    Initial commit
