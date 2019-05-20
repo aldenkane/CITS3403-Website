@@ -93,7 +93,22 @@ This will host the application on localhost. The following (with a slightly diff
 * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-## Testing
+## Unit Testing and System/UserTesting
+
+Unit tests can be performed by running ```python tests.py``` in the command line.
+
+If the unit tests work, the following should appear in the command line:
+```bash
+test_password_hashing (__main__.UserModelCase) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.431s
+
+OK
+```
+
+The following unit tests have been including in the file tests.py:
+  * test_password_hashing tests the password hashing feature to ensure only valid passwords are accepted
 
 The following system/user test sequences can be run to ensure the operability and function of this application:
 
@@ -139,9 +154,9 @@ Verify Admin User View:
 
 The following tutorials were integral in learning Flask and building this application. Most modules were from the CITS3403 Laboratory Work. Comments are provided throughout the application indicating that a tutorial was followed to construct functions and features.
 
-  * Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8". Found at: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world. Reference for this in source code is #Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8"
-  * Daniel Osaetin's (Danidee's) "Flask by Example, Parts 1-7". Found at: https://danidee10.github.io/2016/11/14/flask-by-example-7.html. Reference for this in source code is #Daniel Osaetin's "Flask by Example, Parts 1-7"
-  * Gabor Szabo's "A polling station using Flask. Found at: https://code-maven.com/a-polling-station-with-flask. Reference for this in source code is #Gabor Szabo's "A polling station using Flask"
+  * Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8". Found at: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world. Reference for this in source code is ```#Miguel Grindberg's "Flask Mega-Tutorial, Chapters 1-8"```
+  * Daniel Osaetin's (Danidee's) "Flask by Example, Parts 1-7". Found at: https://danidee10.github.io/2016/11/14/flask-by-example-7.html. Reference for this in source code is ```#Daniel Osaetin's "Flask by Example, Parts 1-7"```
+  * Gabor Szabo's "A polling station using Flask. Found at: https://code-maven.com/a-polling-station-with-flask. Reference for this in source code is ```#Gabor Szabo's "A polling station using Flask"```
 
 This application also uses Bootstrap and Flask, under MIT Licenses.
 
